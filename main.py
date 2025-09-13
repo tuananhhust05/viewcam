@@ -1,14 +1,16 @@
 import sys
 from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtGui import QIcon
-import vlc
+from PyQt6.QtCore import QSize
+
 import os
 import time
 
-# --- Đường dẫn VLC nếu cần ---
-# vlc_path = r"C:\Program Files\VideoLAN\VLC"
-# if os.path.exists(vlc_path):
-#     os.add_dll_directory(vlc_path)
+# thêm đường dẫn chứa libvlc.dll
+base_path = os.path.dirname(os.path.abspath(__file__))
+os.add_dll_directory(base_path)
+
+import vlc  # import sau khi add_dll_directory
 
 LOG_FILE = "failed_cams.txt"
 
@@ -23,6 +25,12 @@ CAM_LIST = [
     {"url": "rtsp://admin:UNV123456%@192.168.22.26:554/ch01", "area": "Cổng", "name": "Cam Cổng 3"},
     {"url": "rtsp://admin:UNV123456%@192.168.22.28:554/ch01", "area": "Phòng tiếp dân", "name": "Cam Tiếp dân 3"}
 ]
+
+def resource_path(relative_path):
+    """ Lấy đường dẫn resource cả khi chạy .py hoặc .exe """
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
 
 AREAS = ["Tất cả"] + sorted(list({cam["area"] for cam in CAM_LIST}))
 
@@ -55,7 +63,7 @@ QComboBox::down-arrow, QSpinBox::up-arrow, QSpinBox::down-arrow {
     height: 0;
 }
 QFrame#videoframe {
-    border-radius: 12px;
+    border-radius: 0px;   /* 👈 bỏ bo tròn để các cam sát nhau */
     background-color: black;
 }
 """
@@ -68,6 +76,7 @@ class CameraWidget(QtWidgets.QWidget):
 
         self.stack_layout = QtWidgets.QStackedLayout(self)
         self.stack_layout.setContentsMargins(0, 0, 0, 0)
+        self.stack_layout.setSpacing(0)
 
         # Video frame
         self.videoframe = QtWidgets.QFrame()
@@ -169,8 +178,8 @@ class FullScreenWindow(QtWidgets.QMainWindow):
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Movis - RTSP Multi-View Player")
-        self.setWindowIcon(QIcon("logo.svg"))
+        self.setWindowTitle("Movis VMS")
+        # self.setWindowIcon(QIcon(resource_path("logo.ico")))  # 👈 dùng logo.ico
         self.resize(1600, 900)
 
         central = QtWidgets.QWidget()
@@ -194,7 +203,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Grid layout
         self.grid = QtWidgets.QGridLayout()
+        self.grid.setSpacing(0)  # 👈 bỏ khoảng cách giữa các cam
+        self.grid.setContentsMargins(0, 0, 0, 0)  # 👈 bỏ margin ngoài
         self.vbox.addLayout(self.grid, stretch=1)
+
         self.cams = []
         for cam_data in CAM_LIST:
             cam = CameraWidget(self, cam_name=cam_data["name"])
@@ -253,8 +265,16 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
+    icon = QIcon()
+    icon.addFile(resource_path("16.png"), QSize(16,16))
+    icon.addFile(resource_path("32.png"), QSize(32,32))
+    icon.addFile(resource_path("48.png"), QSize(48,48))
+    icon.addFile(resource_path("64.png"), QSize(64,64))
+    app.setWindowIcon(icon)
+    # app.setWindowIcon(QIcon(resource_path("logo.ico")))  # 👈 icon hiển thị ở taskbar
     app.setStyleSheet(APP_STYLE)
     win = MainWindow()
+    win.setWindowIcon(icon)
     win.show()
     sys.exit(app.exec())
 
