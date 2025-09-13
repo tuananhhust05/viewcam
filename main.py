@@ -6,9 +6,9 @@ import os
 import time
 
 # --- Đường dẫn VLC nếu cần ---
-vlc_path = r"C:\Program Files\VideoLAN\VLC"
-if os.path.exists(vlc_path):
-    os.add_dll_directory(vlc_path)
+# vlc_path = r"C:\Program Files\VideoLAN\VLC"
+# if os.path.exists(vlc_path):
+#     os.add_dll_directory(vlc_path)
 
 LOG_FILE = "failed_cams.txt"
 
