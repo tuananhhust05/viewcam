@@ -1,0 +1,10 @@
+[
+  { "url": "rtsp://admin:UNV123456%@192.168.22.100:554/ch01", "area": "Cổng", "name": "Cam Cổng 1" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.46:554/ch01", "area": "Phòng tiếp dân", "name": "Cam Tiếp dân 1" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.61:554/ch01", "area": "Tường rào", "name": "Cam Tường rào 1" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.88:554/ch01", "area": "Cổng", "name": "Cam Cổng 2" },
+  { "url": "rtsp://admin:123456a$@192.168.22.73:554/ch01", "area": "Phòng tiếp dân", "name": "Cam Tiếp dân 2" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.86:554/ch01", "area": "Tường rào", "name": "Cam Tường rào 2" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.26:554/ch01", "area": "Cổng", "name": "Cam Cổng 3" },
+  { "url": "rtsp://admin:UNV123456%@192.168.22.28:554/ch01", "area": "Phòng tiếp dân", "name": "Cam Tiếp dân 3" }
+]
