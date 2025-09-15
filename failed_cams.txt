@@ -131,3 +131,38 @@
 2025-09-13 14:45:39 - rtsp://admin:UNV123456%@192.168.22.86:554/ch01 - VLC state: State.Opening
 2025-09-13 14:45:39 - rtsp://admin:UNV123456%@192.168.22.26:554/ch01 - VLC state: State.Opening
 2025-09-13 14:45:40 - rtsp://admin:UNV123456%@192.168.22.28:554/ch01 - VLC state: State.Opening
+2025-09-13 17:22:45 - rtsp://admin:tungduong2018@CUOIXOM7.SMARTDDNS.TV:554/cam/realmonitor?channel=1&subtype=0 - VLC state: State.Opening
+2025-09-13 17:22:46 - rtsp://admin:tungduong2018@NVHXOM2BACHLIEN.SMARTDDNS.TV:554/cam/realmonitor?channel=1&subtype=0 - VLC state: State.Opening
+2025-09-13 17:22:46 - rtsp://admin:tungduong2018@XOM2HODIEUHOA.SMARTDDNS.TV:554/cam/realmonitor?channel=1&subtype=0 - VLC state: State.Opening
+2025-09-13 17:41:56 - rtsp://admin:tungduong2018@NHAVANHOAXOM7.SMARTDDNS.TV:554/cam/realmonitor?channel=1&subtype=0 - VLC state: State.Opening
+2025-09-13 17:47:48 - rtsp://admin:tungduong2018@CUOIXOM7.SMARTDDNS.TV:554/cam/realmonitor?channel=1&subtype=0 - VLC state: State.Opening
+[2025-09-14 10:09:32] Cam Tường rào - Attempting reconnect for Cam Tường rào (state=State.Stopped)
+[2025-09-14 10:09:32] Cam Tiếp dân 2 - Attempting reconnect for Cam Tiếp dân 2 (state=State.Stopped)
+[2025-09-14 10:09:32] Cam Cổng 2 - Attempting reconnect for Cam Cổng 2 (state=State.Stopped)
+[2025-09-14 10:09:34] Cam Tường - Attempting reconnect for Cam Tường (state=State.Stopped)
+[2025-09-14 10:09:38] Cam Tiếp dân 1 - Attempting reconnect for Cam Tiếp dân 1 (state=State.Stopped)
+[2025-09-14 10:11:47] Cam Tường rào - Attempting reconnect for Cam Tường rào (state=State.Stopped)
+[2025-09-14 10:11:47] Cam Tiếp dân 2 - Attempting reconnect for Cam Tiếp dân 2 (state=State.Stopped)
+[2025-09-14 10:11:47] Cam Cổng 2 - Attempting reconnect for Cam Cổng 2 (state=State.Stopped)
+[2025-09-14 10:15:13] Cam Tường rào - Attempting reconnect for Cam Tường rào (state=State.Stopped)
+[2025-09-14 10:15:15] Cam Cổng 2 - Attempting reconnect for Cam Cổng 2 (state=State.Stopped)
+[2025-09-14 10:15:15] Cam Tường - Attempting reconnect for Cam Tường (state=State.Stopped)
+[2025-09-14 10:15:15] Cam Tiếp dân 2 - Attempting reconnect for Cam Tiếp dân 2 (state=State.Stopped)
+[2025-09-14 10:17:57] Cam Tường rào - Attempting reconnect for Cam Tường rào (state=State.Stopped)
+[2025-09-14 10:17:58] Cam Cổng 2 - Attempting reconnect for Cam Cổng 2 (state=State.Stopped)
+[2025-09-14 10:17:58] Cam Tiếp dân 2 - Attempting reconnect for Cam Tiếp dân 2 (state=State.Stopped)
+[2025-09-14 10:18:00] Cam Cổng 1 - Attempting reconnect for Cam Cổng 1 (state=State.Stopped)
+[2025-09-14 10:18:00] Cam Tiếp dân 1 - Attempting reconnect for Cam Tiếp dân 1 (state=State.Stopped)
+[2025-09-14 10:18:00] Cam Tường - Attempting reconnect for Cam Tường (state=State.Stopped)
+[2025-09-14 10:23:16] Cam Tường rào - Reconnect (state=State.Stopped)
+[2025-09-14 10:23:19] Cam Cổng 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:23:20] Cam Tiếp dân 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:24:34] Cam Tường rào - Reconnect (state=State.Stopped)
+[2025-09-14 10:24:34] Cam Tiếp dân 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:24:36] Cam Cổng 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:24:36] Cam Tường - Reconnect (state=State.Stopped)
+[2025-09-14 10:26:57] Cam Cổng 1 - Reconnect (state=State.Stopped)
+[2025-09-14 10:26:59] Cam Tiếp dân 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:26:59] Cam Cổng 2 - Reconnect (state=State.Stopped)
+[2025-09-14 10:27:01] Cam Tiếp dân 1 - Reconnect (state=State.Stopped)
+[2025-09-14 10:27:01] Cam Tường rào - Reconnect (state=State.Stopped)
